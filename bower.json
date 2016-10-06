@@ -1,0 +1,24 @@
+{
+  "name": "peoples-project",
+  "authors": [
+    "Muhammad K Khan <mk.muhammad.khan10@gmail.com>"
+  ],
+  "description": "a sample project to get started with backbone.js",
+  "main": "app.js",
+  "keywords": [
+    "backbone",
+    "starter",
+    "basic",
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "https://mkscodingblog.wordpress.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
