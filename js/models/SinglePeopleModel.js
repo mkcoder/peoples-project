@@ -3,10 +3,11 @@ var app = app || {};
 
 app.SinglePeople = Backbone.Model.extend({
     defaults: {
+        url: '/people',
         interest: 'biking',
         bio: 'a sample bio'
     },
-    initialize: function () {
+    initialize: function () {        
         console.log('initialize: ', this.toJSON());
         this.on('change', function (evt, change) {
             console.log('evt', evt);
@@ -21,5 +22,7 @@ app.SinglePeople = Backbone.Model.extend({
         this.on('change:interest', function () {
             console.log(this.get("first_name") + " changed interest to " + this.get("interest"));
         })
+    },
+    parse: function (data) {
     } 
 });
