@@ -7,9 +7,9 @@ var PeopleService = function (url) {
                         return response.text();
                     })
                     .then(function (text) {
-                        return Promise.resolve(JSON.parse(text));
+                        return JSON.parse(text);
                     })
-                    .then(function(json) {
+                    .then(function(json) {                        
                         return json;
                     })
                     .catch(function (err) {

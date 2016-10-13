@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Peoples</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"></link>
 </head>
 <body>
     <header>
@@ -10,9 +11,10 @@
     </header>
 
     <section>
-        <table>
+        <table id="peoples-table">
             <thead>
                 <tr>
+                    <th>id</th>
                     <th>firstname</th>
                     <th>lastname</th>
                     <th>email</th>
@@ -21,19 +23,20 @@
                     <th>interest</th>
                 <tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                </tr>
-            </tbody>
         </table>
     </section>
 
+    <script type="text/template" id="singlePerson">
+        <tr>
+            <td><%= id %></td>
+            <td><%= first_name %></td>
+            <td><%= last_name %></td>
+            <td><%= email %></td>
+            <td><%= gender %></td>
+            <td><%= bio %></td>
+            <td><%= interest %></td>
+        </tr>
+    </script>
     <script src="js/libs/jquery/dist/jquery.js"></script>
     <script src="js/libs/underscore/underscore.js"></script>
     <script src="js/libs/backbone/backbone.js"></script>
@@ -41,6 +44,7 @@
     <script src="js/services/PeoplesService.js"></script>
     <script src="js/models/SinglePeopleModel.js"></script>
     <script src="js/collections/AllPeoplesCollections.js"></script>
+    <script src="js/views/PeopleView.js"></script>
     <script src="js/controllers/PeopleController.js"></script>
 
 </body>
