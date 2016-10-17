@@ -17,10 +17,7 @@
                     <th>id</th>
                     <th>firstname</th>
                     <th>lastname</th>
-                    <th>email</th>
-                    <th>gender</th>
-                    <th>bio</th>
-                    <th>interest</th>
+                    <th>details</th>
                 <tr>
             </thead>
         </table>
@@ -31,10 +28,7 @@
             <td><%= id %></td>
             <td><%= first_name %></td>
             <td><%= last_name %></td>
-            <td><%= email %></td>
-            <td><%= gender %></td>
-            <td><%= bio %></td>
-            <td><%= interest %></td>
+            <td><a href="#/<%= url %><%= id %>">Details</a></td>
         </tr>
     </script>
     <script src="js/libs/jquery/dist/jquery.js"></script>

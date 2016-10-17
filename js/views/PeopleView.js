@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.singlePeopleView = Backbone.View.extend({
+app.PeopleListView = Backbone.View.extend({
 
     tagName: "tbody",
     className: "single-person",

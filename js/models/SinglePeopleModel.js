@@ -3,7 +3,7 @@ var app = app || {};
 
 app.SinglePeople = Backbone.Model.extend({
     defaults: {
-        url: '/people',
+        url: 'person/',
         interest: 'biking',
         bio: 'a sample bio'
     },
