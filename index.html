@@ -11,7 +11,7 @@
     </header>
 
     <section id="app"></section>
-
+    <!-- TODO: look into require.js or handlebars -->
     <script type="text/template" id="peopleTemplate">        
         <section class="person">
             <h5><%= last_name %>, <%= first_name %></h5>
@@ -31,6 +31,7 @@
             <p><%= bio %></p>
         </section>
     </script>
+    <!-- TODO: fix this make it a single js file you bring in -->
     <script src="js/libs/jquery/dist/jquery.js"></script>
     <script src="js/libs/underscore/underscore.js"></script>
     <script src="js/libs/backbone/backbone.js"></script>
