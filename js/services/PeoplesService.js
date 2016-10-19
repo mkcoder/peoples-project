@@ -1,6 +1,6 @@
 var app = app || {};
 
-var PeopleService = function (url) {
+app.PeopleService = function (url) {
    return {
        getData: function () {
            return fetch(url).then(function (response) {
@@ -17,19 +17,17 @@ var PeopleService = function (url) {
                     });
        },
        getDataById: function (id) {
+           if ( app.Peoples !== undefined ) {
+               return Promise.resolve(_.findWhere(app.Peoples.models, {id: parseInt(id)}));
+           };
            return fetch(url).then(function (response) {
                         return response.text();
                     })
                     .then(function (text) {
                         return JSON.parse(text);
                     })
-                    .then(function(json) {
-                        let result = undefined;
-                        json.forEach(function(item){
-                            if ( item.id.toString() === id ) 
-                                 result = item;                                
-                        });
-                        return result;
+                    .then(function(json) {                        
+                        return _.findWhere(json, {id: parseInt(id)});
                     })
                     .catch(function (err) {
                         console.error(err);
@@ -37,4 +35,4 @@ var PeopleService = function (url) {
        }
    } 
 }
-app.peopleService = new PeopleService(app.BASE_URL);
+app.peopleService = new app.PeopleService(app.BASE_URL);

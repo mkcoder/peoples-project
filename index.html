@@ -10,26 +10,26 @@
         <h1>Peoples</h1>
     </header>
 
-    <section>
-        <table id="peoples-table">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>firstname</th>
-                    <th>lastname</th>
-                    <th>details</th>
-                <tr>
-            </thead>
-        </table>
-    </section>
+    <section id="app"></section>
 
-    <script type="text/template" id="singlePerson">
-        <tr>
-            <td><%= id %></td>
-            <td><%= first_name %></td>
-            <td><%= last_name %></td>
-            <td><a href="#/<%= url %><%= id %>">Details</a></td>
-        </tr>
+    <script type="text/template" id="peopleTemplate">        
+        <section class="person">
+            <h5><%= last_name %>, <%= first_name %></h5>
+            <a href="#/<%= url %><%= id %>">View details</a>
+        </section>
+    </script>
+
+    <script type="text/template" id="singlePersonTemplate">
+        <a href="#" class="go--back">< Go back</a>
+        <section class="singlePerson">
+            <h5><%= last_name %>, <%= first_name%> </h5>
+            <ul>
+                <li>Gender: <%= gender %></li>
+                <li>email: <%= email %></li>
+                <li>interest: <%= interest %></li>
+            </ul>
+            <p><%= bio %></p>
+        </section>
     </script>
     <script src="js/libs/jquery/dist/jquery.js"></script>
     <script src="js/libs/underscore/underscore.js"></script>
@@ -38,6 +38,7 @@
     <script src="js/services/PeoplesService.js"></script>
     <script src="js/models/SinglePeopleModel.js"></script>
     <script src="js/collections/AllPeoplesCollections.js"></script>
+    <script src="js/views/SinglePersonView.js"></script>
     <script src="js/views/PeopleView.js"></script>
     <script src="js/controllers/PeopleController.js"></script>
 

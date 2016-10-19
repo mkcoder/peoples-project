@@ -1,25 +1,45 @@
 body {
-    background: #641E16;
+    background: #ddd;
     color: #fff;
+    margin: 0 auto;
+}
+.peoples {
+    display: inline;
 }
 
-table {
-    background: #943126;
+.person {
+    height:  75px;
+    background:  #eee;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.35);
+    color: #000;
+    text-align: center;    
 }
 
-table thead {
-    background: #A93226;    
-    text-transform: uppercase;
-}
-
-table thead th {
-    padding: 10px;
-    border: 1px solid #943126;
-}
-
-table tbody tr td {
-    border-bottom: 1px solid #922B21;
-    border-top: 1px solid #7B241C;
+.person a {
+    text-decoration: none;
+    background: orange;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;   
 }
 
 
+.person a:hover {
+    background: lightcoral;
+}
+
+.singlePerson {
+    background: #2CB797;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.35);
+    font-size: 1.5em;        
+    margin-top: 20px;
+}
+
+.go--back {
+    background: #F9AC2C;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 20px;
+    margin-bottom: 50px;
+}

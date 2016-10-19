@@ -2,9 +2,8 @@ var app = app || {};
 
 app.PeopleListView = Backbone.View.extend({
 
-    tagName: "tbody",
-    className: "single-person",
-    template: _.template ( document.getElementById("singlePerson").innerHTML ),
+    className: "peoples",
+    template: _.template ( document.getElementById("peopleTemplate").innerHTML ),
     render: function () {
         var self = this;         
         this.collection.each( function (person) {

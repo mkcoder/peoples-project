@@ -23,6 +23,5 @@ app.SinglePeople = Backbone.Model.extend({
             console.log(this.get("first_name") + " changed interest to " + this.get("interest"));
         })
     },
-    parse: function (data) {
-    } 
+    fetch: app.PeopleService.getDataById
 });
