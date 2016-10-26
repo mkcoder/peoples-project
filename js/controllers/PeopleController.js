@@ -6,25 +6,17 @@ Controller.People = function () {
     getAll: function () {
       debugger;
       console.log('hello');
-      Promise.resolve(app.peopleService.getData().then(function (data){
+      app.peopleService.getData()
+      .then(function (data) {
         app.Peoples = new app.PeoplesCollection(data) 
-        return app.Peoples; 
-      }))
-      .then(function (peopleCollectionGroup) {
-        var PeopleListView = new app.PeopleListView({collection: peopleCollectionGroup});
+        var PeopleListView = new app.PeopleListView({collection: app.Peoples});
         $("#app").html(PeopleListView.render().el);
       });
     },
     getPersonById: function (id) {
-        
-        // TODO: we have to create a single view 
-        app.peopleService.getDataById(id)
+        app.peopleService.getDataById(id)        
         .then(function (data) {
-          console.clear();
-          console.log("app.people", new app.SinglePeople(data.attributes));
-          return new app.SinglePeople(data.attributes);
-        })
-        .then(function (person) {
+          let person = new app.SinglePeople(data.attributes);          
           console.log("person", person.toJSON());
           var PeopleListView = new app.SinglePersonView({model: person});
           $("#app").empty();
